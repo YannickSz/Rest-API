@@ -17,8 +17,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("doge").password(passwordEncoder().encode("elSandore"))
-                .authorities("BIG_PP");
+                .withUser("doge").password(passwordEncoder().encode("VdgF43KZ5SBA53-A4D++-5Da5l3-+4v5"))
+                .authorities("ADMIN");
     }
 
     @Bean

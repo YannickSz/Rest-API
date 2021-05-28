@@ -16,10 +16,10 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotBlank(message = "First Name can't be empty/null")
+    @NotBlank(message = "First Name cannot be empty/null")
     private String firstName;
 
-    @NotBlank(message = "Last Name can't be empty/null")
+    @NotBlank(message = "Last Name cannot be empty/null")
     private String lastName;
 
     @NotBlank(message = "Email cannot be empty/null")
