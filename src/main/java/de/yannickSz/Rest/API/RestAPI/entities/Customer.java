@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table (name = "customer")
@@ -13,8 +15,15 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotBlank(message = "First Name can't be empty/null")
     private String firstName;
+
+    @NotBlank(message = "Last Name can't be empty/null")
     private String lastName;
+
+    @NotBlank(message = "Email cannot be empty/null")
+    @Email(message = "Email should have a valid format")
     private String email;
 
     public int getId() {
